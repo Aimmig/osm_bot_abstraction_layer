@@ -58,6 +58,8 @@ class ChangesetBuilder:
         # allow specifing other changeset tags and overwriting hardcoded ones
         for other_tags_key, other_tags_value in other_tags_dict:
             self.changeset_description[other_tags_key] = other_tags_value
+        changeset_description_cleanup = {key: val for key, val in self.changeset_description() if val}
+        self.changeset_description = changeset_description_cleanup
 
     def create_changeset(self, api):
         print("opening changeset", json.dumps(self.changeset_description, sort_keys=True, indent=4))
