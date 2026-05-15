@@ -123,6 +123,12 @@ def valid_shop_values_but_not_entirely_supported():
         'ski', # https://community.openstreetmap.org/t/do-we-need-shop-ski-and-shop-golf/106249
     ]
 
+def access_keys():
+    # https://wiki.openstreetmap.org/wiki/Key:access
+    return ["bicycle", "foot", "hgv", "bus", "taxi", "minibus", "share_taxi", "hgv_articulated", "bdouble", "psv", "access", "vehicle", "motor_vehicle", "vehicle", "motorcar", "motorcycle" "horse", "portage", "electric_bicycle", "cargo_bike", "cycle_rickshaw", "carriage", "hand_cart", "trailer", "caravan", "moped", "speed_pedelec", "mofa", "small_electric_vehicle", "motorhome", "tourist_bus", "coach", "auto_rickshaw", "nev", "golf_cart", "microcar", "atv", "ohv", "snowmobile", "hazmat", "school_bus", "lhv", "roadtrain",
+    "agricultural", "goods", # also used in other meaning
+    ]
+
 def shop_tag_listing():
     return {'shop': valid_shop_values()}
 
