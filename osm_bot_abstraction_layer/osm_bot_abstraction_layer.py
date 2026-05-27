@@ -56,9 +56,9 @@ class ChangesetBuilder:
             self.changeset_description["source"] = source
         self.changeset_description['comment'] = output_full_comment_get_comment_within_limit(affected_objects_description, comment)
         # allow specifing other changeset tags and overwriting hardcoded ones
-        for other_tags_key, other_tags_value in other_tags_dict:
+        for other_tags_key, other_tags_value in other_tags_dict.items():
             self.changeset_description[other_tags_key] = other_tags_value
-        changeset_description_cleanup = {key: val for key, val in self.changeset_description() if val}
+        changeset_description_cleanup = {key: val for key, val in self.changeset_description.items() if val}
         self.changeset_description = changeset_description_cleanup
 
     def create_changeset(self, api):
